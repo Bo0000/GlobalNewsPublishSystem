@@ -1,0 +1,1051 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": 123456,
+      "roleState": true,
+      "default": true,
+      "region": "",
+      "roleId": 1
+    },
+    {
+      "username": "test",
+      "password": "123",
+      "region": "",
+      "roleId": 1,
+      "roleState": true,
+      "default": false,
+      "id": 9
+    },
+    {
+      "username": "test1",
+      "password": "123",
+      "region": "亚洲",
+      "roleId": 2,
+      "roleState": true,
+      "default": false,
+      "id": 10
+    },
+    {
+      "username": "test2",
+      "password": "123",
+      "region": "亚洲",
+      "roleId": 3,
+      "roleState": true,
+      "default": false,
+      "id": 11
+    },
+    {
+      "username": "test3",
+      "password": "123",
+      "region": "欧洲",
+      "roleId": 2,
+      "roleState": true,
+      "default": false,
+      "id": 12
+    },
+    {
+      "username": "test4",
+      "password": "123",
+      "region": "欧洲",
+      "roleId": 3,
+      "roleState": true,
+      "default": false,
+      "id": 13
+    },
+    {
+      "username": "test5",
+      "password": "123",
+      "region": "亚洲",
+      "roleId": 3,
+      "roleState": true,
+      "default": false,
+      "id": 15
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "roleName": "超级管理员",
+      "roleType": 1,
+      "rights": {
+        "checked": [
+          "/user-manage/add",
+          "/user-manage/delete",
+          "/user-manage/update",
+          "/user-manage/list",
+          "/right-manage",
+          "/right-manage/role/list",
+          "/right-manage/right/list",
+          "/right-manage/role/update",
+          "/right-manage/role/delete",
+          "/right-manage/right/update",
+          "/right-manage/right/delete",
+          "/news-manage",
+          "/news-manage/list",
+          "/news-manage/add",
+          "/news-manage/update/:id",
+          "/news-manage/preview/:id",
+          "/news-manage/draft",
+          "/news-manage/category",
+          "/audit-manage",
+          "/audit-manage/audit",
+          "/audit-manage/list",
+          "/publish-manage",
+          "/publish-manage/unpublished",
+          "/publish-manage/published",
+          "/publish-manage/sunset",
+          "/user-manage",
+          "/home"
+        ],
+        "halfChecked": []
+      }
+    },
+    {
+      "id": 2,
+      "roleName": "区域管理员",
+      "roleType": 2,
+      "rights": [
+        "/home",
+        "/user-manage",
+        "/user-manage/add",
+        "/user-manage/delete",
+        "/user-manage/update",
+        "/user-manage/list",
+        "/news-manage",
+        "/news-manage/list",
+        "/news-manage/add",
+        "/news-manage/update/:id",
+        "/news-manage/preview/:id",
+        "/news-manage/draft",
+        "/news-manage/category",
+        "/audit-manage",
+        "/audit-manage/audit",
+        "/audit-manage/list",
+        "/publish-manage",
+        "/publish-manage/unpublished",
+        "/publish-manage/published",
+        "/publish-manage/sunset"
+      ]
+    },
+    {
+      "id": 3,
+      "roleName": "区域编辑",
+      "roleType": 3,
+      "rights": [
+        "/home",
+        "/news-manage",
+        "/news-manage/list",
+        "/news-manage/add",
+        "/news-manage/update/:id",
+        "/news-manage/preview/:id",
+        "/news-manage/draft",
+        "/audit-manage",
+        "/audit-manage/list",
+        "/publish-manage",
+        "/publish-manage/unpublished",
+        "/publish-manage/published",
+        "/publish-manage/sunset"
+      ]
+    }
+  ],
+  "children": [
+    {
+      "id": 3,
+      "title": "添加用户",
+      "rightId": 2,
+      "key": "/user-manage/add",
+      "grade": 2
+    },
+    {
+      "id": 4,
+      "title": "删除用户",
+      "rightId": 2,
+      "key": "/user-manage/delete",
+      "grade": 2
+    },
+    {
+      "id": 5,
+      "title": "修改用户",
+      "rightId": 2,
+      "key": "/user-manage/update",
+      "grade": 2
+    },
+    {
+      "id": 6,
+      "title": "用户列表",
+      "rightId": 2,
+      "key": "/user-manage/list",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 8,
+      "title": "角色列表",
+      "rightId": 7,
+      "key": "/right-manage/role/list",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 9,
+      "title": "权限列表",
+      "rightId": 7,
+      "key": "/right-manage/right/list",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 10,
+      "title": "修改角色",
+      "rightId": 7,
+      "key": "/right-manage/role/update",
+      "grade": 2
+    },
+    {
+      "id": 11,
+      "title": "删除角色",
+      "rightId": 7,
+      "key": "/right-manage/role/delete",
+      "grade": 2
+    },
+    {
+      "id": 12,
+      "title": "修改权限",
+      "rightId": 7,
+      "key": "/right-manage/right/update",
+      "grade": 2
+    },
+    {
+      "id": 13,
+      "title": "删除权限",
+      "rightId": 7,
+      "key": "/right-manage/right/delete",
+      "grade": 2
+    },
+    {
+      "id": 15,
+      "title": "新闻列表",
+      "rightId": 14,
+      "key": "/news-manage/list",
+      "grade": 2
+    },
+    {
+      "id": 16,
+      "title": "撰写新闻",
+      "rightId": 14,
+      "key": "/news-manage/add",
+      "grade": 2,
+      "pagepermisson": 1
+    },
+    {
+      "id": 17,
+      "title": "新闻更新",
+      "rightId": 14,
+      "key": "/news-manage/update/:id",
+      "grade": 2,
+      "routepermisson": 1
+    },
+    {
+      "id": 18,
+      "title": "新闻预览",
+      "rightId": 14,
+      "key": "/news-manage/preview/:id",
+      "grade": 2,
+      "routepermisson": 1
+    },
+    {
+      "id": 19,
+      "title": "草稿箱",
+      "rightId": 14,
+      "key": "/news-manage/draft",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 20,
+      "title": "新闻分类",
+      "rightId": 14,
+      "key": "/news-manage/category",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 22,
+      "title": "审核新闻",
+      "rightId": 21,
+      "key": "/audit-manage/audit",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 23,
+      "title": "审核列表",
+      "rightId": 21,
+      "key": "/audit-manage/list",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 25,
+      "title": "待发布",
+      "rightId": 24,
+      "key": "/publish-manage/unpublished",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 26,
+      "title": "已发布",
+      "rightId": 24,
+      "key": "/publish-manage/published",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 27,
+      "title": "已下线",
+      "rightId": 24,
+      "key": "/publish-manage/sunset",
+      "pagepermisson": 1,
+      "grade": 2
+    }
+  ],
+  "rights": [
+    {
+      "id": 1,
+      "title": "首页",
+      "key": "/home",
+      "pagepermisson": 1,
+      "grade": 1
+    },
+    {
+      "id": 2,
+      "title": "用户管理",
+      "key": "/user-manage",
+      "pagepermisson": 1,
+      "grade": 1
+    },
+    {
+      "id": 7,
+      "title": "权限管理",
+      "key": "/right-manage",
+      "pagepermisson": 1,
+      "grade": 1
+    },
+    {
+      "id": 14,
+      "title": "新闻管理",
+      "key": "/news-manage",
+      "pagepermisson": 1,
+      "grade": 1
+    },
+    {
+      "id": 21,
+      "title": "审核管理",
+      "key": "/audit-manage",
+      "pagepermisson": 1,
+      "grade": 1
+    },
+    {
+      "id": 24,
+      "title": "发布管理",
+      "key": "/publish-manage",
+      "pagepermisson": 1,
+      "grade": 1
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "title": "时事新闻",
+      "value": "时事新闻"
+    },
+    {
+      "id": 2,
+      "title": "环球经济",
+      "value": "环球经济"
+    },
+    {
+      "id": 3,
+      "title": "科学技术",
+      "value": "科学技术"
+    },
+    {
+      "id": 4,
+      "title": "军事世界",
+      "value": "军事世界"
+    },
+    {
+      "id": 5,
+      "title": "世界体育",
+      "value": "世界体育"
+    },
+    {
+      "id": 6,
+      "title": "生活理财",
+      "value": "生活理财"
+    }
+  ],
+  "regions": [
+    {
+      "id": 1,
+      "title": "亚洲",
+      "value": "亚洲"
+    },
+    {
+      "id": 2,
+      "title": "欧洲",
+      "value": "欧洲"
+    },
+    {
+      "id": 3,
+      "title": "北美洲",
+      "value": "北美洲"
+    },
+    {
+      "id": 4,
+      "title": "南美洲",
+      "value": "南美洲"
+    },
+    {
+      "id": 5,
+      "title": "非洲",
+      "value": "非洲"
+    },
+    {
+      "id": 6,
+      "title": "大洋洲",
+      "value": "大洋洲"
+    },
+    {
+      "id": 7,
+      "title": "南极洲",
+      "value": "南极洲"
+    }
+  ],
+  "news": [
+    {
+      "title": "Hello World",
+      "categoryId": 1,
+      "content": "<p style=\"text-align:start;\"></p>\n<p style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Click the link above to open an online editor. Feel free to make some changes, and see how they affect the output. Most pages in this guide will have editable examples like this one.</span></p>\n<h2 style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">How to Read This Guide</span></h2>\n<p style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">In this guide, we will examine the building blocks of React apps: elements and components. Once you master them, you can create complex apps from small reusable pieces.</span></p>\n<blockquote style=\"margin-left:-30px;\"></blockquote>\n<p style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);background-color: rgba(255,229,100,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Tip</span></p>\n<p style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);background-color: rgba(255,229,100,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">This guide is designed for people who prefer</span> <span style=\"color: rgb(0,0,0);background-color: rgba(255,229,100,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><strong>learning concepts step by step</strong>. If you prefer to learn by doing, check out our</span> <a href=\"https://reactjs.org/tutorial/tutorial.html\" target=\"_self\"><span style=\"color: rgb(26,26,26);background-color: rgba(187,239,253,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">practical tutorial</span></a><span style=\"color: rgb(0,0,0);background-color: rgba(255,229,100,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">. You might find this guide and the tutorial complementary to each other.</span></p>\n<p style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">This is the first chapter in a step-by-step guide about main React concepts. You can find a list of all its chapters in the navigation sidebar. If you’re reading this from a mobile device, you can access the navigation by pressing the button in the bottom right corner of your screen.</span></p>\n<p style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Every chapter in this guide builds on the knowledge introduced in earlier chapters.</span> <span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><strong>You can learn most of React by reading the “Main Concepts” guide chapters in the order they appear in the sidebar.</strong></span> <span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">For example,</span> <a href=\"https://reactjs.org/docs/introducing-jsx.html\" target=\"_self\"><span style=\"color: rgb(26,26,26);background-color: rgba(187,239,253,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">“Introducing JSX”</span></a> <span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">is the next chapter after this one.</span></p>\n<h2 style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Knowledge Level Assumptions</span></h2>\n<p style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">React is a JavaScript library, and so we’ll assume you have a basic understanding of the JavaScript language.</span> <span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><strong>If you don’t feel very confident, we recommend</strong></span> <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript\" target=\"_blank\"><span style=\"color: rgb(26,26,26);background-color: rgba(187,239,253,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><strong>going through a JavaScript tutorial</strong></span></a> <span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><strong>to check your knowledge level</strong></span> <span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">and enable you to follow along this guide without getting lost. It might take you between 30 minutes and an hour, but as a result you won’t have to feel like you’re learning both React and JavaScript at the same time.</span></p>\n<blockquote style=\"margin-left:-30px;\"></blockquote>\n<p style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);background-color: rgba(255,229,100,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Note</span></p>\n<p style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);background-color: rgba(255,229,100,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">This guide occasionally uses some of the newer JavaScript syntax in the examples. If you haven’t worked with JavaScript in the last few years,</span> <a href=\"https://gist.github.com/gaearon/683e676101005de0add59e8bb345340c\" target=\"_blank\"><span style=\"color: rgb(26,26,26);background-color: rgba(187,239,253,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">these three points</span></a> <span style=\"color: rgb(0,0,0);background-color: rgba(255,229,100,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">should get you most of the way.</span></p>\n<h2 style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Let’s Get Started!</span></h2>\n<p style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Keep scrolling down, and you’ll find the link to the</span> <a href=\"https://reactjs.org/docs/introducing-jsx.html\" target=\"_self\"><span style=\"color: rgb(26,26,26);background-color: rgba(187,239,253,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">next chapter of this guide</span></a> <span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">right before the website footer.</span><br>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 3,
+      "createTime": 1615778694831,
+      "star": 511,
+      "view": 833,
+      "id": 2,
+      "publishTime": 1615778911028
+    },
+    {
+      "title": "Introducing JSX",
+      "categoryId": 2,
+      "content": "<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">This funny tag syntax is neither a string nor HTML.</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">It is called JSX, and it is a syntax extension to JavaScript. We recommend using it with React to describe what the UI should look like. JSX may remind you of a template language, but it comes with the full power of JavaScript.</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">JSX produces React “elements”. We will explore rendering them to the DOM in the</span> <a href=\"https://reactjs.org/docs/rendering-elements.html\" target=\"_self\"><span style=\"color: rgb(26,26,26);background-color: rgba(187,239,253,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">next section</span></a><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">. Below, you can find the basics of JSX necessary to get you started.</span></p>\n<h3 style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Why JSX?</span></h3>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">React embraces the fact that rendering logic is inherently coupled with other UI logic: how events are handled, how the state changes over time, and how the data is prepared for display.</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Instead of artificially separating</span> <span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><em>technologies</em></span> <span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">by putting markup and logic in separate files, React</span> <a href=\"https://en.wikipedia.org/wiki/Separation_of_concerns\" target=\"_blank\"><span style=\"color: rgb(26,26,26);background-color: rgba(187,239,253,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">separates</span> <span style=\"color: rgb(26,26,26);background-color: rgba(187,239,253,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><em>concerns</em></span></a> <span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">with loosely coupled units called “components” that contain both. We will come back to components in a</span> <a href=\"https://reactjs.org/docs/components-and-props.html\" target=\"_self\"><span style=\"color: rgb(26,26,26);background-color: rgba(187,239,253,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">further section</span></a><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">, but if you’re not yet comfortable putting markup in JS,</span> <a href=\"https://www.youtube.com/watch?v=x7cQ3mrcKaY\" target=\"_blank\"><span style=\"color: rgb(26,26,26);background-color: rgba(187,239,253,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">this talk</span></a> <span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">might convince you otherwise.</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">React</span> <a href=\"https://reactjs.org/docs/react-without-jsx.html\" target=\"_self\"><span style=\"color: rgb(26,26,26);background-color: rgba(187,239,253,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">doesn’t require</span></a> <span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">using JSX, but most people find it helpful as a visual aid when working with UI inside the JavaScript code. It also allows React to show more useful error and warning messages.</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">With that out of the way, let’s get started!</span></p>\n<h3 style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Embedding Expressions in JSX</span></h3>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">In the example below, we declare a variable called</span> <span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>name</code></span> <span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">and then use it inside JSX by wrapping it in curly braces:</span></p>\n<p style=\"text-align:start;\"></p>\n<pre style=\"margin-left:1rem;\"><br>&nbsp;</pre>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 3,
+      "createTime": 1615778715619,
+      "star": 600,
+      "view": 984,
+      "id": 3,
+      "publishTime": 1615778911762
+    },
+    {
+      "title": "Rendering Elements",
+      "categoryId": 3,
+      "content": "<p style=\"text-align:start;\"></p>\n<h2 style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">React Only Updates What’s Necessary</span></h2>\n<p style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">React DOM compares the element and its children to the previous one, and only applies the DOM updates necessary to bring the DOM to the desired state.</span></p>\n<p style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">You can verify by inspecting the</span> <a href=\"https://reactjs.org/redirect-to-codepen/rendering-elements/update-rendered-element\" target=\"_blank\"><span style=\"color: rgb(26,26,26);background-color: rgba(187,239,253,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">last example</span></a> <span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">with the browser tools:</span></p>\n<p style=\"margin-left:0px;\"></p>\n<img src=\"https://reactjs.org/c158617ed7cc0eac8f58330e49e48224/granular-dom-updates.gif\" alt=\"DOM inspector showing granular updates\" style=\"height: ;width: \"/>\n<p style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Even though we create an element describing the whole UI tree on every tick, only the text node whose contents have changed gets updated by React DOM.</span></p>\n<p style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">In our experience, thinking about how the UI should look at any given moment, rather than how to change it over time, eliminates a whole class of bugs.</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(109,109,109);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Is this page useful?</span><a href=\"https://github.com/reactjs/reactjs.org/tree/master/content/docs/rendering-elements.md\" target=\"_self\"><span style=\"color: rgb(55,57,64);background-color: transparent;font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Edit this page</span></a>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 3,
+      "createTime": 1615778740202,
+      "star": 800,
+      "view": 869,
+      "id": 4,
+      "publishTime": 1615778912481
+    },
+    {
+      "title": "Components and Props",
+      "categoryId": 4,
+      "content": "<p style=\"text-align:start;\"><span style=\"color: rgb(109,109,109);font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a</span> <a href=\"https://reactjs.org/docs/react-component.html\" target=\"_self\"><span style=\"color: rgb(26,26,26);background-color: rgba(187,239,253,0.3);font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">detailed component API reference here</span></a><span style=\"color: rgb(109,109,109);font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">.</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</span></p>\n<h2 style=\"text-align:start;\"><br> <span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Let’s recap what happens in this example:</span></h2>\n<ol>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">We call</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>ReactDOM.render()</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">with the</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>&lt;Welcome name=\"Sara\" /&gt;</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">element.</span></li>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">React calls the</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>Welcome</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">component with</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>{name: 'Sara'}</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">as the props.</span></li>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Our</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>Welcome</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">component returns a</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>&lt;h1&gt;Hello, Sara&lt;/h1&gt;</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">element as the result.</span></li>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">React DOM efficiently updates the DOM to match</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>&lt;h1&gt;Hello, Sara&lt;/h1&gt;</code>.</span></li>\n</ol>\n<blockquote style=\"text-align:start;\"></blockquote>\n<p style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);background-color: rgba(255,229,100,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><strong>Note:</strong></span> <span style=\"color: rgb(0,0,0);background-color: rgba(255,229,100,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Always start component names with a capital letter.</span></p>\n<p style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);background-color: rgba(255,229,100,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">React treats components starting with lowercase letters as DOM tags. For example,</span> <span style=\"color: rgb(0,0,0);background-color: rgba(255,229,100,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>&lt;div /&gt;</code></span> <span style=\"color: rgb(0,0,0);background-color: rgba(255,229,100,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">represents an HTML div tag, but</span> <span style=\"color: rgb(0,0,0);background-color: rgba(255,229,100,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>&lt;Welcome /&gt;</code></span> <span style=\"color: rgb(0,0,0);background-color: rgba(255,229,100,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">represents a component and requires</span> <span style=\"color: rgb(0,0,0);background-color: rgba(255,229,100,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>Welcome</code></span> <span style=\"color: rgb(0,0,0);background-color: rgba(255,229,100,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">to be in scope.</span></p>\n<p style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);background-color: rgba(255,229,100,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">To learn more about the reasoning behind this convention, please read</span> <a href=\"https://reactjs.org/docs/jsx-in-depth.html#user-defined-components-must-be-capitalized\" target=\"_self\"><span style=\"color: rgb(26,26,26);background-color: rgba(187,239,253,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">JSX In Depth</span></a><span style=\"color: rgb(0,0,0);background-color: rgba(255,229,100,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">.</span></p>\n<h2 style=\"text-align:start;\"><br>&nbsp;</h2>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 3,
+      "createTime": 1615778777924,
+      "star": 100,
+      "view": 201,
+      "id": 5,
+      "publishTime": 1615778914498
+    },
+    {
+      "title": "State and Lifecycle",
+      "categoryId": 4,
+      "content": "<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Now the clock ticks every second.</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Let’s quickly recap what’s going on and the order in which the methods are called:</span></p>\n<ol>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">When</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>&lt;Clock /&gt;</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">is passed to</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>ReactDOM.render()</code>, React calls the constructor of the</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>Clock</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">component. Since</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>Clock</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">needs to display the current time, it initializes</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>this.state</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">with an object including the current time. We will later update this state.</span></li>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">React then calls the</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>Clock</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">component’s</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>render()</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">method. This is how React learns what should be displayed on the screen. React then updates the DOM to match the</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>Clock</code>’s render output.</span></li>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">When the</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>Clock</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">output is inserted in the DOM, React calls the</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>componentDidMount()</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">lifecycle method. Inside it, the</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>Clock</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">component asks the browser to set up a timer to call the component’s</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>tick()</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">method once a second.</span></li>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Every second the browser calls the</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>tick()</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">method. Inside it, the</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>Clock</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">component schedules a UI update by calling</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>setState()</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">with an object containing the current time. Thanks to the</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>setState()</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">call, React knows the state has changed, and calls the</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>render()</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">method again to learn what should be on the screen. This time,</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>this.state.date</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">in the</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>render()</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">method will be different, and so the render output will include the updated time. React updates the DOM accordingly.</span></li>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">If the</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>Clock</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">component is ever removed from the DOM, React calls the</span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>componentWillUnmount()</code></span> <span style=\"color: rgb(26,26,26);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">lifecycle method so the timer is stopped.</span></li>\n</ol>\n<h2 style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Using State Correctly</span></h2>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">There are three things you should know about</span> <span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>setState()</code>.</span></p>\n<h3 style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Do Not Modify State Directly</span></h3>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">For example, this will not re-render a component:</span></p>\n<p style=\"text-align:start;\"><br>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 3,
+      "createTime": 1615778808893,
+      "star": 300,
+      "view": 454,
+      "id": 6,
+      "publishTime": 1615778916224
+    },
+    {
+      "title": "Forms",
+      "categoryId": 5,
+      "content": "<h2 style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Controlled Components</span></h2>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">In HTML, form elements such as</span> <span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>&lt;input&gt;</code>,</span> <span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>&lt;textarea&gt;</code>, and</span> <span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>&lt;select&gt;</code></span> <span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">typically maintain their own state and update it based on user input. In React, mutable state is typically kept in the state property of components, and only updated with</span> <a href=\"https://reactjs.org/docs/react-component.html#setstate\" target=\"_self\"><span style=\"color: rgb(26,26,26);background-color: rgba(187,239,253,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code>setState()</code></span></a><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">.</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">We can combine the two by making the React state be the “single source of truth”. Then the React component that renders a form also controls what happens in that form on subsequent user input. An input form element whose value is controlled by React in this way is called a “controlled component”.</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">For example, if we want to make the previous example log the name when it is submitted, we can write the form as a controlled component:</span></p>\n<p style=\"text-align:start;\"><br>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 3,
+      "createTime": 1615778852584,
+      "star": 309,
+      "view": 480,
+      "id": 7,
+      "publishTime": 1615778917074
+    },
+    {
+      "title": "Thinking in React",
+      "categoryId": 6,
+      "content": "<p style=\"text-align:start;\"><span style=\"color: rgb(109,109,109);font-size: 18px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">React is, in our opinion, the premier way to build big, fast Web apps with JavaScript. It has scaled very well for us at Facebook and Instagram.</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">One of the many great parts of React is how it makes you think about apps as you build them. In this document, we’ll walk you through the thought process of building a searchable product data table using React.</span></p>\n<h2 style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Start With A Mock</span></h2>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Imagine that we already have a JSON API and a mock from our designer. The mock looks like this:</span></p>\n<p style=\"text-align:start;\"></p>\n<img src=\"https://reactjs.org/static/1071fbcc9eed01fddc115b41e193ec11/d4770/thinking-in-react-mock.png\" alt=\"Mockup\" style=\"height: 276.854px;width: 228px\"/>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Our JSON API returns some data that looks like this:</span></p>\n<p style=\"margin-left:0px;\"><br> <span style=\"font-size: 17px;\">The first thing you’ll want to do is to draw boxes around every component (and subcomponent) in the mock and give them all names. If you’re working with a designer, they may have already done this, so go talk to them! Their Photoshop layer names may end up being the names of your React components!</span></p>\n<p style=\"margin-left:0px;\"><span style=\"font-size: 17px;\">But how do you know what should be its own component? Use the same techniques for deciding if you should create a new function or object. One such technique is the</span> <a href=\"https://en.wikipedia.org/wiki/Single_responsibility_principle\" target=\"_blank\"><span style=\"color: rgb(26,26,26);background-color: rgba(187,239,253,0.3);font-size: 17px;\">single responsibility principle</span></a><span style=\"font-size: 17px;\">, that is, a component should ideally only do one thing. If it ends up growing, it should be decomposed into smaller subcomponents.</span></p>\n<p style=\"margin-left:0px;\"><span style=\"font-size: 17px;\">Since you’re often displaying a JSON data model to a user, you’ll find that if your model was built correctly, your UI (and therefore your component structure) will map nicely. That’s because UI and data models tend to adhere to the same</span> <span style=\"font-size: 17px;\"><em>information architecture</em>. Separate your UI into components, where each component matches one piece of your data model.</span></p>\n<p style=\"margin-left:0px;\"></p>\n<img src=\"https://reactjs.org/static/eb8bda25806a89ebdc838813bdfa3601/6b2ea/thinking-in-react-components.png\" alt=\"Component diagram\" style=\"height: 319.521px;width: 275px\"/>\n<p style=\"margin-left:0px;\"><span style=\"font-size: 17px;\">You’ll see here that we have five components in our app. We’ve italicized the data each component represents.</span></p>\n<ol>\n<li style=\"margin-left:0px;\"><span style=\"color: rgb(26,26,26);font-size: 16px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><code><strong>FilterableProductTable</strong></code></span> <span style=\"color: rgb(26,26,26);font-size: 16px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\"><strong>(orange):</strong></span> <span style=\"color: rgb(26,26,26);font-size: 16px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">contains the entirety of the example</span><br>&nbsp;</li>\n</ol>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 3,
+      "createTime": 1615778891518,
+      "star": 781,
+      "view": 891,
+      "id": 8,
+      "publishTime": 1615778917615
+    },
+    {
+      "title": "teichui-1111",
+      "categoryId": 1,
+      "content": "<p>11111111111</p>\n",
+      "region": "亚洲",
+      "author": "铁锤",
+      "roleId": 2,
+      "auditState": 3,
+      "publishState": 0,
+      "createTime": 1617518218962,
+      "star": 0,
+      "view": 0,
+      "id": 14
+    },
+    {
+      "title": "司马海味-111",
+      "categoryId": 2,
+      "content": "<p>dwda</p>\n",
+      "region": "亚洲",
+      "author": "司马海味",
+      "roleId": 3,
+      "auditState": 3,
+      "publishState": 0,
+      "createTime": 1617518470380,
+      "star": 0,
+      "view": 0,
+      "id": 15
+    },
+    {
+      "title": "西门11111",
+      "categoryId": 2,
+      "content": "<p>dwadw111</p>\n",
+      "region": "南极洲",
+      "author": "西门吹灯",
+      "roleId": 3,
+      "auditState": 2,
+      "publishState": 3,
+      "createTime": 1617518536111,
+      "star": 0,
+      "view": 0,
+      "id": 16,
+      "publishTime": 1667312709410
+    },
+    {
+      "title": "test",
+      "category": "时事新闻",
+      "content": "<p>test</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 0,
+      "publishState": 0,
+      "createTime": 1667038135111,
+      "star": 0,
+      "view": 0,
+      "id": 19
+    },
+    {
+      "title": "test1",
+      "category": "时事新闻",
+      "content": "<p>test1</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 0,
+      "publishState": 0,
+      "createTime": 1667125148335,
+      "star": 0,
+      "view": 0,
+      "id": 20
+    },
+    {
+      "title": "test2",
+      "category": "科学技术",
+      "content": "<p>test2</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 3,
+      "createTime": 1667201069457,
+      "star": 2,
+      "view": 5,
+      "id": 21,
+      "publishTime": 1667285760694
+    },
+    {
+      "title": "test3",
+      "category": "世界体育",
+      "content": "<p>test3</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 0,
+      "publishState": 0,
+      "createTime": 1667201097441,
+      "star": 0,
+      "view": 0,
+      "id": 22
+    },
+    {
+      "title": "test4",
+      "category": "军事世界",
+      "content": "<p>test4</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 0,
+      "publishState": 0,
+      "createTime": 1667202506801,
+      "star": 0,
+      "view": 0,
+      "id": 23
+    },
+    {
+      "title": "test6",
+      "category": "时事新闻",
+      "content": "<p>test6</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 3,
+      "publishState": 0,
+      "createTime": 1667202919758,
+      "star": 0,
+      "view": 0,
+      "id": 25
+    },
+    {
+      "title": "test5",
+      "category": "环球经济",
+      "content": "<p>test5</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 0,
+      "publishState": 0,
+      "createTime": 1667205990403,
+      "star": 0,
+      "view": 0,
+      "id": 26
+    },
+    {
+      "title": "test7",
+      "category": "时事新闻",
+      "content": "<p>test7</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 0,
+      "publishState": 0,
+      "createTime": 1667272154975,
+      "star": 0,
+      "view": 0,
+      "id": 27
+    },
+    {
+      "title": "test2-1",
+      "category": "时事新闻",
+      "content": "<p>test2-1</p>\n",
+      "region": "亚洲",
+      "author": "test2",
+      "roleId": 3,
+      "auditState": 2,
+      "publishState": 3,
+      "createTime": 1667272320716,
+      "star": 1,
+      "view": 4,
+      "id": 28,
+      "publishTime": 1667467316304
+    },
+    {
+      "title": "test4-1",
+      "category": "时事新闻",
+      "content": "<p>test4-1</p>\n",
+      "region": "欧洲",
+      "author": "test4",
+      "roleId": 3,
+      "auditState": 2,
+      "publishState": 3,
+      "createTime": 1667272374978,
+      "star": 0,
+      "view": 1,
+      "id": 29,
+      "publishTime": 1667467405860
+    },
+    {
+      "title": "test3-1",
+      "category": "时事新闻",
+      "content": "<p>test3-1</p>\n",
+      "region": "欧洲",
+      "author": "test3",
+      "roleId": 2,
+      "auditState": 2,
+      "publishState": 3,
+      "createTime": 1667272985641,
+      "star": 0,
+      "view": 0,
+      "id": 30,
+      "publishTime": 1667467406010
+    },
+    {
+      "title": "aaa",
+      "category": "环球经济",
+      "content": "<p>aaa</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 3,
+      "createTime": 1667467361136,
+      "star": 0,
+      "view": 1,
+      "id": 31,
+      "publishTime": 1667467406162
+    },
+    {
+      "title": "bbb",
+      "category": "军事世界",
+      "content": "<p>bbb</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 3,
+      "createTime": 1667467372001,
+      "star": 0,
+      "view": 1,
+      "id": 32,
+      "publishTime": 1667467406309
+    },
+    {
+      "title": "ccc",
+      "category": "世界体育",
+      "content": "<p>ccc</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 3,
+      "createTime": 1667467384922,
+      "star": 0,
+      "view": 0,
+      "id": 33,
+      "publishTime": 1667467406470
+    },
+    {
+      "title": "ddd",
+      "category": "生活理财",
+      "content": "<p>ddd</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 3,
+      "createTime": 1667467395675,
+      "star": 0,
+      "view": 0,
+      "id": 34,
+      "publishTime": 1667467408505
+    },
+    {
+      "title": "韩国电池行业打响增长第一枪！遇史上最大旺季",
+      "category": "科学技术",
+      "content": "<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">随着全球电动汽车市场的迅速增长，韩国电池行业迎来旺季。LG新能源与三星SDI在今年第三季度创下了历史最高经营业绩，SK ON也将大幅减少了亏损幅度。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">预计这一增长趋势将会持续一段时间。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">LG新能源26日公布，统计数据显示第三季度的营业利润为5219亿韩元，由此从去年同期出现的3728亿韩元营业亏损转为盈利。</span> <span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">销售额为76482亿韩元，同比增加89.9%，几乎翻了一倍，营业利益方面也是取得了最好的成绩。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">除了LG以外三星SDI也在第三季度创下了最高业绩。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">三星SDI的营业利润率超过10%，收益性大幅得到改善。前三季度累计销售额为141582亿韩元，营业利润为13172亿韩元，已经超过了去年的全年业绩。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\"><strong>韩国电池企业成立\"电池联盟\"</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">近日，韩国政府与LG新能源、SK ON、三星SDI等韩国电池企业携手成立了\"电池联盟\"，目标是在2030年实现全球占有率40%的目标，超越中国成为电池最强国。 </span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">政府还公开了实现50万亿韩元（1人民币约合196韩元）国内投资的蓝图</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">预计到2030年，电池行业将在韩国国内设施投资上投入30.5万亿韩元。联盟计划将韩国国内生产能力从去年的39GWh增加到2025年的60GWh,增加约1.5倍。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">韩国目前在高端电动汽车需求增加的形势下，由于高附加值产品的供应扩大、欧洲市场ESS电池销量增加以及原材料价格上涨，销售额和收益性得到了大幅提升。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">政策方面对韩国电池行业增长也有很大影响，美国为在全球电池核心材料供应链上打破中国的垄断，为配合美国的《通膨削减法案》，原本在电池行业对中国高度依赖的韩国电池巨头LG新能源和SK ON公司，最近与澳洲和加拿大等电池原料企业进行合作。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">从今年9月全球电动汽车电池占有率来看，中国宁德时代以35.1%位居第一，LG新能源以14.1%的占有率紧追不舍。中国BYD(12.8%)、日本松下(8.1%)之后，SK ON(6.2%)和三星SDI(4.9%)分别排在第5位和第6位。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">宁德时代95%以上的产能销往国内各大品牌车企，包括国产特斯拉、蔚来汽车、小鹏汽车、南北大众、华晨宝马等公司。在全球布局上，宁德时代始终落后LG新能源一步。作为一家全球动力电池巨头，过于本土化竞争力略显不足。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">而LG新能源的全球战略驾轻就熟，尤其在欧洲和北美，获得了大量订单。并且在今年1—7月中国以外地区动力电池装机量排名中，LG新能源仍然以31.1GWh排名第一，宁德时代仅位列第三。</span>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1667543985696,
+      "star": 0,
+      "view": 3,
+      "id": 35,
+      "publishTime": 1667544843359
+    },
+    {
+      "title": "小米，造出了一台售价30万的“相机”",
+      "category": "科学技术",
+      "content": "<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">在小米 12S Ultra发布时，小米高管在和网友互动时表示：</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">「不会跳水。」</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">本来我存着这张图，想双 11 来打小米的脸，结果是我太年轻了。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">这旗舰的价格，是真 tm 坚挺啊。</span>&nbsp;</p>\n<p><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">让人意外的是，今天小米还能给 12S Ultra 搞个「魔改版」。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">整体来看，小米 12S Ultra 概念机没多大变化。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">一样的屏幕规格，一样的骁龙 8+，一样的 MIUI 13。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">唯一的不同之处，在背面。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">小米 12S Ultra 概念机对后置影像模组进行了魔改。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">砍掉了潜望式长焦，超广角镜头位置也进行了下移。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">中间部分取而代之的是直取光 1 英寸传感器。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">没错，就是把相机的那个传感器搬过来了。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">换句话说，小米 12S Ultra 概念机能装上正儿八经的相机镜头。</span>&nbsp;</p>\n<p><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">你们不是常调侃「老是给影像堆料，还不如直接把相机做进手机」嘛？</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">喏，阿米还真给整出来了。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">但接得下相机镜头的手机，接不进 3.5mm 有线耳机，总感觉哪里怪怪的。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">收，回到手机。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">日常状态下，小米 12S Ultra 概念机能用原来的 1 英寸主摄和超广角镜头拍摄。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">但如果你想拍得专业点，就可以外接一个镜头。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">小米专门还对模组部分进行加固。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">卡口直接固定在整机中框，模组四个角还各塞了一颗螺丝。</span>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1667544127248,
+      "star": 0,
+      "view": 0,
+      "id": 36,
+      "publishTime": 1667544843719
+    },
+    {
+      "title": "历届进博会上，习近平主席这样论开放",
+      "category": "时事新闻",
+      "content": "<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">11月4日，第五届中国国际进口博览会暨虹桥国际经济论坛开幕式将在上海举行，国家主席习近平将发表视频致辞。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">这将是习近平主席连续第五年在进博会开幕式上发表主旨演讲或致辞。回望过去四届进博会，“开放”是贯穿始终的关键词。</span>&nbsp;</p>\n<p><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">本届进博会上，习近平主席又将有哪些重要论述，宣布哪些重大举措，让我们共同期待。</span>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1667544196326,
+      "star": 0,
+      "view": 0,
+      "id": 37,
+      "publishTime": 1667544844283
+    },
+    {
+      "title": "以中国新发展为世界提供新机遇（进博会观察）",
+      "category": "时事新闻",
+      "content": "<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">扬互利共赢风帆，开放春风温暖世界。东海之滨，黄浦江畔，第五届中国国际进口博览会如约而至。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">世界500强和行业龙头企业超280家，全球四大粮商、十大医疗器械企业、十五大药品企业悉数到齐，一系列“全球首秀”“亚洲首发”“中国首展”纷至沓来……宾客云集、万商会聚，东方之约再次谱写开放融通、互利共赢的恢弘乐章。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">党的二十大报告提出：“中国式现代化是走和平发展道路的现代化。”“我们坚定站在历史正确的一边、站在人类文明进步的一边，高举和平、发展、合作、共赢旗帜，在坚定维护世界和平与发展中谋求自身发展，又以自身发展更好维护世界和平与发展。”“中国坚持对外开放的基本国策，坚定奉行互利共赢的开放战略，不断以中国新发展为世界提供新机遇，推动建设开放型世界经济，更好惠及各国人民。”</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">作为世界上首个以进口为主题的国家级展会，五年来，进博会充分发挥国际采购、投资促进、人文交流、开放合作四大平台作用，成为推动构建新发展格局的窗口、高水平开放的载体、多边主义的舞台。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">中国国际进口博览会行至第五届。这一由习近平主席亲自谋划、亲自部署、亲自推动的全球贸易盛会，让人们看到了中国主动向世界开放市场、同各国分享中国机遇的满满诚意，为艰难复苏的世界经济注入强大正能量。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">共同培育全球发展新动能</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">党的二十大报告提出：“中国坚持经济全球化正确方向，推动贸易和投资自由化便利化，推进双边、区域和多边合作，促进国际宏观经济政策协调，共同营造有利于发展的国际环境，共同培育全球发展新动能”。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">第五届进博会是党的二十大后我国举办的首场重大国际展会。目前，企业展、虹桥论坛、国家展、人文交流和配套活动等各项准备工作已经就绪。其中，企业商业展将有来自世界各国的优质企业携大量“高精尖”展品参展。虹桥论坛将继续举办主论坛、“RCEP与更高水平开放”高层论坛，发布《世界开放报告2022》及最新世界开放指数，并举办多场分论坛。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">“进博会已成为中国坚持高水平对外开放的生动缩影，是汇聚全球能量、链接发展机遇的综合性窗口。”拜耳集团相关负责人表示，拜耳将继续借助进博会强大的溢出效应，携手全球伙伴开展多领域合作，为全社会创造更多价值。今年，拜耳的展台面积较去年增加50%，是首届进博会的三倍多，将全面展示多领域创新成果。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">扩大开放，助力构建新发展格局。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">爱尔兰威士忌、斯里兰卡狮子啤酒、尼泊尔高山羊绒围巾……在上海青浦绿地缤纷城进博集市，即将在第五届进博会上展览展示的同款商品备受青睐。绿地集团总裁助理、贸易港集团总经理薛迎杰介绍，“进博会后，进博集市将持续在上海各主要商圈落地，让消费者在家门口体验全球优质商品。”</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">推动高质量发展，满足人民日益增长的美好生活需要，呼唤更高水平对外开放。“在构建新发展格局中，进博会发挥重要作用。”上海市商务发展研究中心副主任张娟认为，进博会持续举办，通过展示、交易、消费等国内流通环节以及贸易、投资等国际经济活动，促进国内国际双循环更加畅通运行。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">互利共赢，与世界共享中国机遇。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">秘鲁羊驼玩偶品牌“温暖的羊驼”产品种类扩大到20多个大类，在中国20多个城市建立起销售渠道，订单数量增长40倍；阿富汗小伙儿阿里·法伊兹获得了2000多张手工羊毛地毯的订单，为阿富汗的许多家庭带来了收入……历届进博会，留下许多合作共赢的生动故事。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">进一步缩减外资准入负面清单、优化调整跨境电商零售进口商品清单、发布《鼓励外商投资产业目录（2022年版）》……五年来，进博会上的一条条开放承诺，化为务实举措。今年前三季度，我国实际使用外资金额超过1万亿元人民币，按可比口径同比增长15.6%。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">“今年进博会，我们带来了可广泛用于新生儿及婴儿的呼吸道合胞病毒创新预防技术，这也是该预防技术的中国首秀。”赛诺菲巴斯德相关负责人表示，未来赛诺菲巴斯德将致力于更好地融入中国市场，加大在粤港澳大湾区的投资，推动中国生物技术的发展。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">把握大势，推动建设开放型世界经济。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">从诞生之日起，进博会就蕴含着推动全球共同开放的基因。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">“经济全球化是不可逆转的历史大势”“各国走向开放、走向合作的大势没有改变”“中国愿同各国一道，共建开放型世界经济，让开放的春风温暖世界”……五年来，进博会始终传递着推动建设开放型世界经济的“中国主张”，画出构建人类命运共同体的最大同心圆。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">“作为中国扩大开放、扩大进口的重要平台，进博会汇聚了来自全球的新产品、新技术、新服务、新方案，展现了中国市场的巨大潜力，架起了与世界共享中国市场红利的桥梁。”路易达孚北亚区包装油业务总监杨亚丽表示，“我们希望通过进博会，和更多的合作伙伴共同交流。”</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">提升贸易投资合作质量和水平</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">计划发布两款全新产品、展示40多种全球畅销产品、在两个场馆的展示区同时参展……“进博会释放的红利实实在在，溢出效应看得见、摸得着，为跨国公司提供了展示实力与成果的绝佳平台，带来了巨大市场机遇。”康宝莱全球高级副总裁郭木说。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">党的二十大报告提出：“依托我国超大规模市场优势，以国内大循环吸引全球资源要素，增强国内国际两个市场两种资源联动效应，提升贸易投资合作质量和水平。”</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">进博会越办越好，综合效应持续放大，不仅推动我国产业升级、有效改善国内供给、促进消费升级、服务构建新发展格局，也为全球跨国企业提供新机遇、带来新商机。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">打造开放平台，带动贸易升级。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">周一在国外牧场生产的牛奶，周二就能上飞机，周三直达中国消费者餐桌……作为首批通关贸易便利化“验放”分离和“边检边放”的创新监管模式试点企业之一，新西兰纽仕兰乳业全球研发总经理罗伊感受到“进博速度”的魅力：“这展现了中国通过锐意改革、创新制度、改进流程来不断优化营商环境的坚定态度。”</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">让“看不见的服务”展现出“看得见的效果”，进博会的服务贸易展区历年都颇受关注。今年进博会，第一太平戴维斯带来了“可持续城市”的全方位持续运营和创新专业服务。“进博会开设了服务贸易展区，我们便意识到，第一太平戴维斯进一步在中国本土化发展的机遇来了。”第一太平戴维斯中国区市场传讯部负责人、董事邵轶菁说。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">文旅服务、金融服务、物流服务、供应链管理服务……与有形展品不同，在进博会服务贸易展区，多数展品都“无实物”，但这丝毫不影响现场咨询、洽谈、签约的热度。本届进博会，服务贸易展区将继续迎来全球顶尖企业参展，助推全球服务贸易“再升级”。从实物到服务，从优化进口商品结构到升级扩容服务贸易，进博会为加快贸易转型升级注入了更多新动能。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">促进投资合作，推动产业升级。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">今年8月，霍尼韦尔与蜂巢能源牵手合作，前者通过整合产品及技术优势，提供卓越的数字化解决方案，打造蜂巢能源数字化工厂，实现精益化、自动化的产业智造转型升级。从首届进博会的“头回客”，到年年进博会的“回头客”，霍尼韦尔共展出近100项创新技术、产品和解决方案，其中多项为首次在中国市场推出。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">“作为进博会的‘老朋友’，我们将依托进博会开放高效的平台效应，不断将领先的创新成果引入中国，并推动本土创新持续走向世界。”霍尼韦尔公司相关负责人余锋说。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">五年来，进博会不仅经贸合作成果丰硕，更吸引大量外商来华投资，更多尖端技术、高端装备进入中国市场，助力国内产业升级。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">扩大优质进口，服务消费升级。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">植物来源食品、首款预制菜产品、众多在中国乃至全球首发的产品……本届进博会，嘉吉将呈现近百件创新产品，凸显了健康、可持续等特色，满足中国消费者不断升级的消费需求。嘉吉公司相关负责人刘军说：“过去四届进博会，嘉吉签署总价值超过100亿美元的合作协议，我们将持续为中国市场提供更多符合消费需求的产品与服务。”</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">随着生活水平提高，中国消费市场加速升级，对“购物车”的种类和品质提出了更高要求。五年来，进博会上的参展企业带来一大批全球新科技、新产品，丰富了国内消费者的选择，更好满足了消费者日益升级的消费需求。同时，优质进口商品在丰富国内供给的同时，也推动国内企业不断提升竞争力。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">推动建设更加美好的世界</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">当前，世界百年未有之大变局加速演进，世界进入新的动荡变革期。面对战略机遇和风险挑战并存、不确定难预料因素增多的国际国内环境，中国在进博会上传递的信息备受瞩目。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">党的二十大报告提出：“必须坚持胸怀天下。”“我们要拓展世界眼光，深刻洞察人类发展进步潮流，积极回应各国人民普遍关切，为解决人类面临的共同问题作出贡献，以海纳百川的宽阔胸襟借鉴吸收人类一切优秀文明成果，推动建设更加美好的世界。”</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">中国发展离不开世界，世界发展也需要中国。中国实行更加积极主动的开放战略，让世界分享中国市场，为世界经济复苏注入强劲动力。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">提升合作水平，助推高质量发展——</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">“中国经济正处在一个转型升级的关键时期，进博会将对中国经济高质量发展起到重要助推作用。”清华大学中国发展规划研究院常务副院长董煜介绍，进口高品质、多元化的商品和服务，有助于吸引更多资源要素，有效促进国际循环的质量水平提升，助力加快构建新发展格局。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">跨国公司乘兴而来。丹佛斯公司相关负责人徐阳介绍：“进博会是中国全面扩大开放、推动全球交流联通的重要平台。在本届进博会，丹佛斯将展示全球领先的能效解决方案和实践，助力行业实现绿色转型，推动中国经济高质量发展，以及‘双碳’目标的实现。”</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">国内企业收获满满。过去四届进博会，中国机械工业集团有限公司签署了61份约170亿美元的进口采购合同，将国际先进的机械设备引入中国市场。“本届进博会我们将在绿色节能、高端装备、大宗商品等领域签署多项进口采购合同，装备中国制造，提升国内制造业自身创新活力和生产能力，加快建设现代化产业体系。”中国机械工业集团有限公司党委书记、董事长张晓仑说。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">坚定开放承诺，实行更加积极主动的开放战略——</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">迈上新征程，中国通过进博会再一次坚定承诺进一步扩大对外开放，实行更加积极主动的开放战略。在全球经济增速放缓、新冠肺炎疫情依然严峻的背景下，第五届进博会如期召开，进一步增强了跨国公司继续投资中国市场、服务中国消费者的信心。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">“我们希望继续借助进博会为自身发展凝聚更强动力。”花王（上海）产品服务有限公司总经理冈伸太朗介绍，自从1993年进入中国市场以来，花王不断将集团内先进研究技术和全新系列产品引入中国市场，未来将会为中国消费者提供更多优质的产品和服务。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">维护多边主义，凝聚全球开放合作共识——</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">“建设统一大市场，构建更加连通、更高水平的全球贸易体系；加强数字经济等新领域的贸易合作，提升全球经济治理水平；加强人文交流，更好凝聚全球开放合作共识。”董煜说，通过举办进博会，中国在促进国际贸易、深化全球合作、应对全球治理挑战等议题上展现了大国担当，为世界经济复苏增添信心和力量。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">“尽管当前全球经济的不确定性不稳定性因素增多，我们相信，中国经济仍拥有广阔空间和无限可能。”高通公司全球高级副总裁钱堃表示，中国广阔的市场激发企业源源不断的创新潜能，我们在中国合作伙伴身上感受到了中国经济的蓬勃生机，未来还将与更多中国企业携手共进。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">东方之约，全球之益。我们所处的是一个充满挑战的时代，也是一个充满希望的时代。顺应时代潮流，把握发展大势，以更大的开放拥抱发展机遇，以更好的合作谋求互利共赢，就一定能够应对各种困难和挑战，同世界人民携手开创人类更加美好的未来！</span></p>\n<p style=\"text-align:start;\"></p>\n<p><br>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1667544225245,
+      "star": 0,
+      "view": 0,
+      "id": 38,
+      "publishTime": 1667544844548
+    },
+    {
+      "title": "“东方之约”一年比一年精彩”",
+      "category": "时事新闻",
+      "content": "<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">作为党的二十大之后中国举办的首场重大国际展会，即将举行的第五届中国国际进口博览会，再一次向世界展现中国不断扩大开放、分享发展机遇的决心和信心。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">进博会激发创新活力，成为越来越多企业进行产品首发或首展的舞台。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">在本届进博会法国达能集团展台，“碳捕捉”互动模拟装置引人注目，展示了世界领先的碳捕捉技术：只要轻触互动屏上的图标，将二氧化碳一点点收集起来，经过一系列工序，模拟装置的末端就能“制造出”一个饮料瓶。展台工作人员介绍，与传统工艺相比，用新工艺生产的“智慧碳瓶”，可减少近60%的碳排放。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">德国肖特特种玻璃的展示同样吸引众人目光。肖特公司在实验室中造出的仅有16微米厚的超薄玻璃，被称为“细胞级”超薄玻璃。凭借优异的性能，该公司生产的玻璃在多家知名品牌的可折叠手机上采用，实现了进博会“展品变商品”的初衷。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">今年进博会展台延续绿色低碳的特点。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">在能源低碳及环保技术专区，法国施耐德电气展台绿白相间的主色调凸显了绿色主题，一座描绘零碳城市图景的模型展示该公司在数字技术、低碳能源、低碳工业等领域的解决方案及应用成果。施耐德电气全球执行副总裁尹正说：“依托进博会，我们将不断深化与中国合作伙伴的互惠合作，共同创造绿色可持续未来。”</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">进博会让参展企业共享中国市场机遇，收获满满。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">应用于轮胎漏气自修复的低碳材料，只吸油不吸水的海上溢油处理海绵……美国陶氏公司携多种新材料亮相本届进博会，通过数字化手段，展现材料科技如何改善生活、推动可持续发展。陶氏公司亚太区总裁彭睿思表示：“借助进博会平台，公司得以与中国合作伙伴进行广泛而深入的沟通，增进对中国市场的了解。我们将携手合作伙伴，继续助力中国可持续发展。”</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">韩国三星展台展出的虚拟驾驶舱，吸引不少参观者前来打卡。据介绍，该驾驶系统可以提前探测突然出现的车辆等；导航地图上，沿途咖啡馆以增强现实形式展现，可在车内下单购买咖啡；在自动驾驶模式下，驾驶者还可以进行视频会议。中国三星总裁黄得圭说：“三星在进博会展出的很多展品已成为商品，走进千家万户。未来，三星将继续以创新驱动发展。”</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">作为进博会上的老朋友，丹麦格兰富在本届进博会的展台面积比去年增加了50%。宽敞明亮的展台上，展出了多款明星产品，包括即将全球首发的第三代节能智慧分析诊断系统。该系统通过实时监控、综合分析等手段，对高能耗行业进行诊断，并提供能源优化方案。格兰富首席运营官乌里克·格诺说：“中国市场广阔，发展潜力巨大，我们对中国经济长期向好抱有信心，将继续深耕中国市场。”</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">进博会让展品变商品、让展商变投资商，交流创意和理念，联通中国和世界。国际采购、投资促进、人文交流、开放合作的四大平台作用更加凸显。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">在今年首设的“展商变投资商”展示区，美国强生公司展出了借助进博会推动创新医疗产品和解决方案加快落地等14个成功案例。强生公司全球副总裁宋为群表示：“进博会是开放融通的重要平台，期待继续与中国合作伙伴携手，创造互利共赢的未来。”</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">“承前启新，共伍未来”，这是今年普华永道展位的主题。展位将“伍”的笔画作为空间的分割线进行造型规划，采用数字高科技手段，将互动装置等植入其中，为参观者带来沉浸式体验。“进博会是新时代中国不断推动高水平开放的生动缩影。”普华永道中国市场主管合伙人梁伟坚表示，“五年来，我们见证了进博会强大的溢出效应。‘东方之约’一年比一年精彩。”</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">《 人民日报 》( 2022年11月04日 02 版)</span>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1667544251457,
+      "star": 0,
+      "view": 0,
+      "id": 39,
+      "publishTime": 1667544844727
+    },
+    {
+      "title": "港股暴涨！恒指大涨超6%，京东等多只科技股涨超10%",
+      "category": "环球经济",
+      "content": "<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">金融界11月4日消息 午后港股市场继续走高，恒生科技指数一度涨超10％，目前市场有所回落，截至发稿，恒生指数涨6.63％，恒生科技指数涨8.79％。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">盘面上，科技股、短视频概念股、SaaS概念、云办公、餐饮、互联网医疗等板块涨幅居前。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">科技股方面，快手涨超16%、阿里巴巴涨超13%，京东涨超13%，百度涨超10%。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">其他个股中，中国有赞大涨28.57％，康希诺生物涨超25％，碧桂园服务、华住集团、绿城中国、李宁等纷纷涨超10％。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">南向资金净流入超60亿元，其中，港股通（沪）净流入26.54亿元，港股通（深）净流入37.73亿元。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">其中，汽车股集体爆发，小鹏汽车涨超25%，蔚来涨超17%，理想汽车涨近14%，长城汽车、零跑汽车涨超11%。</span></p>\n<p style=\"text-align:start;\"></p>\n<p><br>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1667544291886,
+      "star": 0,
+      "view": 0,
+      "id": 40,
+      "publishTime": 1667544844912
+    },
+    {
+      "title": "离岸人民币兑美元收复7.25关口，日内涨超800点",
+      "category": "环球经济",
+      "content": "<p><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">截至发稿，离岸人民币兑美元收复7.25关口，日内涨超800点报7.2497。</span>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1667544314157,
+      "star": 0,
+      "view": 0,
+      "id": 41,
+      "publishTime": 1667544848000
+    },
+    {
+      "title": "美今年第六次加息，世界怨声载道",
+      "category": "环球经济",
+      "content": "<p><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">美联储又加息了。据央视新闻报道，当地时间2日，美国联邦储备委员会宣布加息75个基点。这已经是美联储今年以来的第六次加息，让本就深陷衰退危机的全球经济再次雪上加霜。世界银行就此警告称，全球范围的“加息潮”将把全球经济推向衰退，尤其是发展中国家将面临一连串的金融危机风险和“持久伤害”。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">今年以来，为了应对本国高通胀可能引发的经济衰退危机，美联储已经分别在3月、5月、6月、7月、9月接连暴力加息5次，加上此次，已经累计加息375个基点，这个加息力度实属史上罕见，创1981年以来美联储最密集、最激进加息纪录。但是，即使这么大的力度，美国经济的高通胀顽疾仍然没有出现明显的好转迹象。今年9月的美国消费者价格指数同比增长8.2%，涨幅仍然处于历史高位。这说明美联储压根没找到治病的药方，天天靠打兴奋剂是不能解决自身问题的。目前美国通胀高企的问题，主要原因大约有这么几个方面：</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">第一，疫情期间，为了安抚民意，刺激消费，美国政府大力印钞，给国民发放福利，已经出现了反噬效应；第二，在能源紧缺的情况下，全球能源价格飙涨，也进一步助推了美国通胀。可能大家觉得美国不是能源很充足吗，还高价卖给欧洲国家，但是其实钱都被美国那些企业家们赚走了，美国老百姓仍然需要承担高昂的能源价格。据美国有线电视新闻网报道，过去半年，美国几家大的石油公司总获利超过了1000亿美元，利润涨幅基本都在百分之百以上，埃克森美孚的获利更是达到187亿美元，比去年同期猛涨177%，打破了该公司152年历史上的最高纪录，相当于每秒钟都能创造2350美元的收益。对此美国政府也不会有什么实际调控的举措，拜登嘴上说着要向能源公司征收暴利税，但实际上，大家都知道他无非就是在中期选举前说几句选民爱听的话而已。毕竟这些大公司跟美国官方的联系太紧密了。这些政府官员们是不会动大企业家的蛋糕的；第三，美国劳动力短缺导致劳动力成本上升，继而推动商品价格上涨。还有最重要的原因，就是美国与中国的贸易脱钩，实际上加重了其通货膨胀的问题，但是即使是在这种情况下，拜登政府却仍没有取消加征的对华关税。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">美元不断加息对全球经济产生的恶果已经显现出来了。综合来说，美元加息会对全球资本造成“虹吸效应”，“便宜钱”从亚欧大幅流失，以美元计价的大宗商品价格上扬，对非出口型国家来说造成较高的负担，对全球经济的回暖也会造成冲击，比如欧洲、东亚以及东南亚，这些地区的国家货币较年初已经贬值超10%甚至更多。与此产生的连锁反应就是让很多国家面临本币贬值、通货膨胀、经济衰退、主权债务危机甚至系统性金融风险。而且这种系统性风险，不仅会发生在发展中国家，连发达国家也不会例外，从目前来看，英国和日本的情况已经非常不乐观。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">其实面对美国的加息，美日是采取了不同的应对之法的，英国是选择通过加息对抗美元的加息，但是紧缩的货币政策仍然让英国经济面临陷入衰退的风险，英国经济学家已经发出警告，预计从今年10月到明年6月，英国经济每个季度将萎缩0.2%左右。美媒认为，这代表着英国选民选择了封闭而贫穷的的经济而不是开放和富裕的经济。这些“错误”所导致的可预测结果便是工资下降，生产率增长极低，其结果便是“英国正沦为西欧最穷国家之。</span> <br> <span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">而日本呢，是选择了不加息。他也是没办法，因为日本的债务本身就很高，如果日本加息，会另日本财政遭受巨大冲击，每加息1个百分点，日本政府每年要多支付大约10万亿日元的利息。因此日本政府只好选择不加息。但是不加息就意味着日元对美元实际上贬值了，日元跌跌不休，跌幅可以算的上是领跑全球，目前，日元对美元汇率跌进150日元兑1美元区间，上次同样的情况还是在1990年泡沫经济时期。且如此一来，但美国和日本之间的利差会让投资者大举抛售日本国债，日债市场的波动又会引发各国对日本债务问题的担忧。加息也是危机，不加息也是危机，但是两害相权取其轻，日本央行选来选去，决定不加息，但是加大购买国债。如此，等于把日债这个炸弹，留在了未来，就赌它什么时候爆了。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">由此可见，英国和日本，这两个国家其实已经很难受了现在，而更令人讽刺的是，这两个国家跟美国的关系可以是不一样，是美国意图控制亚欧大陆两个最重要的支点，是美国的老牌盟友，即使这么重要的国家，美国收割起他们来都毫不手软。更别提其他欧洲和发展中国家了。</span></p>\n<p><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">可以说，美元霸权在不断收割世界财富，威胁越来越多的国家的经济安全，不少国家已经意识到，有必要摆脱美元的统治地位，并采取实际行动开始了“去美元化”进程。国际货币基金组织公布的数据显示，过去20年里，美元在全球外汇储备中的占比整体呈现下降趋势，今年一季度的占比为58.88%，显著低于2000年前后超过70%的占比，这表明各国央行在逐步减持美元。去美元化上步伐比较大的几个国家，俄罗斯、伊朗、印度、以色列，都有一些实质性的去美元化的做法，比如不断减持美元在国际储备中的份额、建立非美元的国际贸易结算机制、吸纳更多国际货币作为其外汇储备等等。</span></p>\n<p><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">可以说，“去美元化”的进程已经开启。当然短期内，肯定效果那没有那么明显，美元凭借其强大的经济、军事、科技和金融实力，以及欧元、日元和英镑的相对衰落，仍将在一定程度上维持其在全球货币体系中的主导地位。但冰冻三尺非一日之寒，世界各国去美元化是必然的趋势，美国这种不断转嫁自身危机的做法让大家都清楚，把自己国家的经济命运捆绑在美元上就是不理性不健康的。相信会有越来越多的国家探索出更多去美元化的方式。美元随意收割的日子迟早都会结束。</span>&nbsp;&nbsp;&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1667544387488,
+      "star": 0,
+      "view": 0,
+      "id": 42,
+      "publishTime": 1667544848184
+    },
+    {
+      "title": "中国版“匕首”！",
+      "category": "军事世界",
+      "content": "<p><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">受政策和观念的惯性影响，珠海航展一直是国产先进装备的典型展示平台，因此从10月下旬以来，外界一直对这次航展上的“新家伙”非常期待，但最终登场的重量级选手，还是让舆论有些措手不及。3日下午，随着空军一架轰-6K降落珠海，其两翼下挂载的标志性导弹，瞬间引起了外界关注。没有花费太多时间，舆论很快确定这就是一款新型国产空基高超音速导弹，并贴切的将其称为中国版“匕首”，以应对北方那款著名的同类武器。但很少有人意识到的是，这款新导弹与中国版“匕首”的标签，究竟有多深的技术渊源。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">▲引发外界高度关注的新导弹</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">2018年3月1日，时任俄罗斯总统普京公开俄制“匕首”空基导弹的部分信息，其中“最大速度10马赫，射程2000千米”的描述让外界大为震惊，而西方媒体则嗤之以鼻，认为这不过是俄罗斯军事工业的又一个PPT项目。然而仅仅在10天之后，俄罗斯就公布了其南部军区，由米格-31BM战斗机，搭载“匕首”完成试射的画面，舆论态度也顿时为之一变。最终在2022年3月，“匕首”完成了其服役生涯的首次实战，精确命中并摧毁了乌军的一座弹药库，成就了其全球第一款空基高超音速武器的赫赫威名。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">▲俄制“匕首”经过了实战的检验</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">相比之下，国内也在高超音速武器领域造诣很深，其中2019年10月公开亮相的东风-17，乃是公认这一领域的最强型号，但其只能在陆地上部署的特性，比起能随米格-31BM移动部署的“匕首”，又有明显不如。不过，鹰击-21舰载高超音速武器在2022年4月横空出世后，在一定程度上缓解了这种尴尬，之后社交媒体上出现的轰-6N挂载鹰击-21传闻，更是让外界为之一喜。最终，此次轰-6K携带新导弹现身，表明国内已率先完成，海陆空高超音速导弹的全领域覆盖，而新导弹的性能、定位和应用范围，也就随之成为焦点问题。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">▲东风-17的技术水平很高</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">一开始，舆论按惯性认为新导弹属于鹰击-21发展序列，应该是其调整推进系统后衍生的型号。然而，将新导弹与航展上的鹰击-21E模型对比，可以很明显的发现两者一粗一细，截面尺寸差距很大，尾部弹翼结构也有很大区别。从技术和生产制造的角度上来讲，这种“调整”的代价过大，已经不具备同系列生产、降低成本的意义。在这时，外界恍然发现，已经脱离舆论视线很久的一款国产装备——M-20，在外形和结构上与新导弹非常相似，通过进一步对比两者的截面尺寸、整体布局甚至是尾部弹翼后，可以发现这两者的重合度非常高。因此，基本可以断定，此次引发外界欢呼的新导弹，与M-20战术导弹有着密不可分的关系。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">▲新导弹与鹰击-21E的区别比较明显</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">所谓M-20，其实就是国产东风-12近程导弹的外贸型号，这是一款非常特殊而又不引人关注的导弹。其设计定位是取代东风-11，与东风-16组成新的近程弹道导弹体系，但由于其创造性的应用了双锥体设计，为东风-21D、东风-26的发展起到重要作用，因此很少公开露面。与此同时，其也接过了东风-11/15（外销代号M-11/9）的出口职责，以M-20的编号对国际买家销售。在中国与白俄罗斯合作研发的“波罗乃兹”火箭炮中，M-20就以290千米射程的战术导弹定位，被集成到项目中作为“杀手锏”来使用。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">▲“波罗乃兹”火箭炮与M-20战术导弹</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">最重要的是，俄制“匕首”的直接技术源头，正是其“伊斯坎德尔-M”系统中的9M723型导弹。俄方将这款原本射程480千米的战术武器，进行相应调整后挂载在米格-31BM上。当其发射时，不仅省去了导弹爬升段消耗的燃料和时间，而且还赋予了导弹与载机相同的速度和高度，这就是其体型几乎不变，射程却是陆基型号约4倍的直接原因。此次亮相的国产新导弹，在外形上与俄制“匕首”非常相似，其技术原型也与9M723型导弹一样，是一款射程不到500千米的战术装备（一般认为自用版东风-12射程在450千米左右），中国版“匕首”的标签，可谓是名至实归。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">▲演变出“匕首”的9M723型导弹</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">当然，由于中国版“匕首”的载机是仅仅能亚音速飞行的轰-6K，无法与最大速度2.83马赫，能长时间以2.32马赫速度飞行的米格-31相比，前者的作战高度也只有不到18000米，距离米格-31的24000米有一定差距。因此，国产新导弹的最大射程，无法达到陆基型号4倍，即1800千米的高度，大约1400-1600千米就已经很不错了。不过，相比与只能由米格-31BM在机腹下挂载一枚的“匕首”，国产型号能由轰-6K一次性搭载两枚的设计，又形成了数量优势，总的来说算是各有所长。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">▲新导弹性能略弱但数量更多</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">顺便提一句，“匕首”和9M723型导弹的重量都在4吨左右，而M-20自重也在4吨上下，因此新导弹的重量应该也是4吨左右。这意味着轰-6搭载两枚已经就是极限，绝无搭载第三枚的可能。至于歼-16重型战斗机，在理论上也可以挂载新导弹，但考虑到对机动性、航程的影响，以及后勤保障需求，实际上几乎不可能发生。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">▲歼-16在理论上是可以挂载新导弹的</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">从发展时间、技术路线以及性能参数等方面出发，新导弹有明显参考俄制“匕首”的痕迹，这一点可能在情感上让人难以接受，但实际上反而是国内相关技术储备充足的标志。毕竟当下俄方绝无可能外流其“匕首”的核心技术，国内在仅仅获得少量基础信息的情况下，花费少量时间就将俄罗斯引以为傲的“匕首”关键技术破解，并成功复制在国产导弹身上，属于新时代的“看一眼就怀孕”。表明国内在高超音速武器领域的技术发展，已经达到顺手拈来的高端水准。相比之下，受东风-17问世刺激，决心也要发展乘波体弹头的美国，近年来相关测试却屡屡失利，正是“看了许多眼也学不会”的典型。</span>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1667544472238,
+      "star": 0,
+      "view": 0,
+      "id": 43,
+      "publishTime": 1667544848735
+    },
+    {
+      "title": "俄表态要报复英国后，美军航母核潜艇开赴欧洲",
+      "category": "军事世界",
+      "content": "<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\"><strong>一波未平，一波再起！</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">正当俄乌冲突尚未平息，俄与美西方的关系持续升级之际，英国再次点燃了俄罗斯的怒火。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">日前，克里姆林宫表示，据俄情报部门掌握的信息表明，乌克兰在英国军事顾问的指导下，参与了对俄黑海舰队的袭击，并称还有证据表明，英国特种部队参与了俄“北溪”天然气管道被破坏一事<strong>，俄方将对英国采取进一步措施，以作为对这一系列袭击的回应。</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">简单点说，就是<strong>俄罗斯准备报复英国。</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">众所周知，俄英关系一直很紧张，俄乌冲突爆发前，就曾出现英国军舰强闯俄领海，<strong>遭到俄军开火驱逐的情况，并且用的还是实弹。</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">俄乌冲突爆发后，英国更是主张对俄发起大规模制裁，是西方阵营中，“反俄”情绪最高涨的国家，比之美国也是有过之而无不及。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">如今，俄方又指认英国参与了对“北溪”管道、黑海舰队的袭击，还表态要报复英国，不排除在<strong>“新仇旧恨”一起算</strong>的情况下，俄英关系彻底决裂以及发生军事冲突的可能。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">然而，正当俄英关系剑拔弩张之际，美国也“掺和”进来了，<strong>准备替英国“撑腰”。</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\"><strong>主要3个体现吧。</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\"><strong>一，外交上，美国替英国“出头”。</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">白宫表示，俄罗斯并没有给出足以令外界信服的证据证明，英国参与了俄黑海舰队、“北溪”管道被袭击事件，<strong>对英国的指控是“毫无根据的”。</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">言下之意，美国并不认同俄罗斯对英国的指控，除非俄方能拿出确凿证据。</span>&nbsp;&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">值得注意的是，俄方前几天才获准对“北溪”管道爆炸现场展开调查，而如今距离该事件发生已经过去了一个多月，即便有痕迹，也被海水腐蚀或冲刷得所剩无几了。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">更不要说，在俄方前去调查之前，德国、丹麦和瑞典等国已经进行了一次调查，不排除事发现场遭到人为二次破坏的可能。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">3日，俄天然气公司便表示，已完成对“北溪1”管道在瑞典水域的受损现场的首批数据收集工作，在事发地附近发现了一个<strong>人为形成的坑洞，但该坑洞与管道被破坏有何关联，仍需进一步分析评估。</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">也就是说，俄方要想从事故现场调查中，查找到<strong>“证明是英国所为”</strong>的证据，难度非常大。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">至于，俄黑海舰队遇袭一事，同样存在“证据链不完整”的情况，要想直接证明英国参与此事，难度也很大。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">更要注意的是，日前，美国一家云储存服务商披露，“北溪”管道事件发生后，所有人都不知情之际，时任英国首相特拉斯曾给美国务卿布林肯发送了一条内容为<strong>“搞定了”</strong>的信息。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">基于这一点，外界一度怀疑，<strong>英国与美国一起策划了对“北溪”管道的袭击，并称英国可能是负责执行的一方。</strong></span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">毕竟，“北溪”管道位于深海，要想进行破坏，需要特定的技术和设备，除非国家力量或军方特种部队实施，否则很难实现。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">并且，俄方还披露，美国军舰、飞机曾在事发前后，<strong>于“北溪”管道被破坏现场出现过。</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">结合种种细节来看，<strong>如果英国被证实参与其中，那美国可能也脱不了干系</strong>，如今美国替英国“出头”，没准也有保全自身的用意。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">毕竟，一旦俄方拿到关键证据，“拔出萝卜带出泥”，那美国也将成为俄方宣泄怒火的对象。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\"><strong>体现二，军事上，美国准备替英国“撑腰”。</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">3日，五角大楼表示，美军<strong>“福特”号核动力航母</strong>正率领航母编队赶赴欧洲，预计11月中旬就能抵达，届时将停靠在英国南部的朴茨茅斯海军基地。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">不过，由于“福特”号航母吨位太大，无法进入朴茨茅斯基地，将停泊在基地外的水域。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">据悉，这是美军“福特”号航母服役后，<strong>第一次部署欧洲，</strong>而且第一次来，就选择停靠在英国的军事基地，这显然不是巧合。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">这还没完。同样在3日，<strong>美军俄亥俄级战略核潜艇“罗德岛”号</strong>，也罕见公开访问了英国皇家海军直布罗陀基地。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">很显然，美国这是在向俄罗斯等潜在对手释放<strong>“威慑”信号</strong>，也是在给英国等北约盟友<strong>“安全感”。</strong></span>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1667544527650,
+      "star": 0,
+      "view": 0,
+      "id": 44,
+      "publishTime": 1667544849986
+    },
+    {
+      "title": "“无人版歼20”亮相珠海，国产忠诚僚机全面开花",
+      "category": "军事世界",
+      "content": "<p><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">第14届中国珠海航展到来之际，各种国产无人机全面开花，而其中</span><strong>飞鸿-97A无人机在航天科技集团无人系统展区C位出镜，</strong><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">更是吸引了一众军迷关注的目光。</span>&nbsp;</p>\n<p><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">作为一款国产无人机，飞鸿-97A因何能在众多无人设备中脱颖而出？其实她酷似歼-20的外观，就已经给出了答案，</span><strong>展区上亮相的飞鸿-97A，真的像极了无人版本的歼-20，</strong><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">如果远看不留神的话，有可能真的会混淆。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">央视记者探访时，就看到了优化之后的飞鸿-97A，这架无人机的外观类似于歼-20隐形战机，可以说隐身能力是相当可以的。而对应歼-20驾驶座舱的位置，则改为一个光电瞄准设备，可以实现对目标的追踪锁定。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">另外，飞鸿-97A是具备实战打击能力的，该机型也设计了机腹的折叠式弹舱，必要时可以开启，其中可能装有一批巡飞弹，如果是实战的话，这样的载弹量基本上是够用了。</span>&nbsp;</p>\n<p><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">最令人期待的一点，是飞鸿-97A未来可能以无人僚机的身份，与歼-20一起出动执行任务，因为两者都有隐形技术，在执行任务时都能够隐身规避雷达，因此可以互相掩护，强强联手。而歼-20作为队长机，甚至可以指挥多架飞鸿-97A无人机往前方执行侦察打击任务，飞行员自己不需要驾机深入前线，就能够有效提升生存效率。飞鸿-97A外观酷似歼-20，本身也有掩护歼-20长机的意义。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">歼-20本身就有指挥操作无人机的能力，在之前央视军事公布的节目内容中，就出现了一架歼-20带着3架无人机“排队飞行”的画面，当时公开的这3架无人机，被认为可能是国产攻击-11无人机，攻击-11也是近年来才公开的无人机，其飞翼式的设计，寓意具备隐身技术，未来也是歼-20可以选择的隐形僚机方案之一。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">不过现在看来，飞鸿-97A可能更加适合这份工作，因为飞鸿-97A的设计更接近于于歼-20，也就是说飞鸿-97A可能会在无人驾驶的条件下，继承歼-20强大的机动飞行能力。另外在与歼-20的默契配合方面，飞鸿-97A可能将会有更加专业的表现。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">有人战机搭配无人僚机，这样的概念是近年来才提出的。因为航空技术无人化是一个大趋势，但短时间内，无人机也不可能完全取代有人战机。因此通过有人战机指挥控制无人僚机的方式，可以实现作战方案上的优化。</span>&nbsp;</p>\n<p><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">在这一方面，我们的发展十分迅速，这才几年的时间，就有各种方案出来了。这也充分说明，我国的航空工业技术水平，已经进入到世界顶流、全球领先的行列之中。</span> <br>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1667544575734,
+      "star": 0,
+      "view": 0,
+      "id": 45,
+      "publishTime": 1667544850461
+    },
+    {
+      "title": "勇士客场全败暴露4大扎心问题：场均失分122倒数第一＋太依赖库里",
+      "category": "世界体育",
+      "content": "<p><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">北京时间11月4日，金州勇士遗憾输给了奥兰多魔术。在本场比赛过后，勇士暴露出了多个扎心问题，除此之外，普尔在本赛季的表现也是比较糟糕。</span>&nbsp;</p>\n<p><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">首先，在本场比赛过后，普尔在本赛季的总正负值是-85，联盟倒数第二，仅好于杰伦-格林的-91。此役，普尔12投4中，三分球5投1中，只得到11分2篮板2助攻，正负值是-10。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">其次，在本场比赛中，勇士的罚球和对手的差距实在是太大了。勇士全队15罚10中，魔术则是46罚33中。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">第三，库里本赛季场均砍下31分7篮板6.8助攻，场均三分球5.1个。但是当库里在场上的时候，勇士正负值高达+33，当库里下场的时候，勇士的正负值只有-62。对于现在的勇士来说，过于依赖库里成为了不可被忽视的问题。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">第四，在本赛季以来，勇士的防守实在是太过于糟糕，球队场均失分高达122.2分，排名联盟倒数第一。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">赛后，勇士主帅科尔接受了媒体采访的时候也是谈到了本场比赛的失利，他说：“我们在取得16分的领先之前，我就觉得事情不对劲。当我们给对面46次罚球机会的时候，真的很难赢下比赛。”</span> <br>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1667544616905,
+      "star": 0,
+      "view": 0,
+      "id": 46,
+      "publishTime": 1667544851516
+    },
+    {
+      "title": "世界杯解码｜16号：德国两位冠军队长 法国光头门神",
+      "category": "世界体育",
+      "content": "<p><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">北京时间11月4日，距离世界杯开幕还有16天时间，我们特别推出《世界杯解码》系列专栏，今天，就为球迷朋友们介绍在世界杯赛场上有着出色表现的16号。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\"><strong>瓦尔特</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">弗里茨-瓦尔特是德国足球史上的伟大传奇之一，也是世界足坛最优秀的前锋之一，379场各项赛事一共打入306球。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">1954年世界杯，瓦尔特作为联邦德国的队长，身披16号球衣，率领球队在决赛中3-2击败匈牙利，上演了著名的“伯尔尼奇迹”，队史第一次夺得了雷米特杯。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">整个国家队生涯，瓦尔特一共出场66次，贡献33球，进球效率非常出色，1999年，他毫无悬念地进入德国足球20世纪最佳阵容。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\"><strong>拉姆</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">整整60年后，又一位穿着16号球衣的德国队长，举起了世界杯冠军，他就是拉姆。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">2006年世界杯，当时的拉姆还是左后卫，结果揭幕战第6分钟就首开记录，一战成名！2010年世界杯，他又戴上了队长袖标，成为了德国队在该项赛事的最年轻的队长，连续两届帮助球队获得季军。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">2014年世界杯，拉姆打满了德国队全部7场比赛，在半决赛7-1横扫巴西一战送出助攻，最终以队长的身份为德意志战车第四次捧起世界杯冠军奖杯。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\"><strong>巴特斯</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">巴特斯是法国足球史上最伟大的门将之一，他的光头非常著名，世界杯上布兰克的深情一吻，更是让人记忆犹新的经典瞬间。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">然而，巴特斯的扑救能力更强，他的身材虽然不高，但反应非常迅速，经常能做出世界级扑救，而且有强大的气场，越是大场面，越来劲。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">1998年世界杯，巴特斯7场比赛一共只丢了2个球，身前稳固的防线当然功不可没，单他自己的出色发挥，也是法国夺得世界杯冠军的关键。</span>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1667544647574,
+      "star": 0,
+      "view": 0,
+      "id": 47,
+      "publishTime": 1667544852882
+    },
+    {
+      "title": "奥沙利文捧杀赵心童？6-1横扫中国一哥后，盛赞才华横溢令人惊叹",
+      "category": "世界体育",
+      "content": "<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">11月4日凌晨，2022年世界斯诺克巡回赛之冠中冠赛事决出了最后一个四强席位，英格兰名将、世锦赛七冠王得主、现世界第一奥沙利文以6-1大胜中国名将赵心童，顺利晋级四强，半决赛将对阵另外一名中国选手范争一。尽管比赛中，奥沙利文近乎横扫般大胜赵心童，但他对现中国军团排名最高之人依然是各种盛赞，称赵心童是才华横溢的天才，令人惊叹。</span></p>\n<p><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">冠中冠赛事是赛季中的一项顶级邀请赛，只有在最近一年时间内获得大赛冠军的选手才有资格参赛，中国军团方面，只有获得上赛季英锦赛和德国大师赛冠军的赵心童，欧洲大师赛冠军范争一有机会参赛，另外还包括元老世锦赛、女子斯诺克世锦赛冠军一同出战。在前三个比赛日中，塞尔比和特鲁姆普表现稳定，连胜两场晋级，而首次参赛的范争一，则连续决胜局绝杀罗伯逊和瑞恩-戴，强势挺进四强。</span>&nbsp;</p>\n<p><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">剩余最后一个小组之争，是奥沙利文、赵心童、米尔金斯以及女子斯诺克世界冠军泰国选手旺哈鲁泰。小组半决赛，奥沙利文4-2轻取米尔金斯，赵心童则磕磕绊绊地同样4-2战胜女将旺哈鲁泰。小组决赛上演了奥沙利文与赵心童的会师。结果比赛中，赵心童开局糟糕，被奥沙利文连下四局，半场4-0领先。第五局，赵心童抓住机会，单杆92分追回一局，但之后两局再度崩盘，被奥沙利文联系一杆制胜，最终1-6惨败出局。</span>&nbsp;</p>\n<p><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">晋级四强的奥沙利文，半决赛中将与范争一对决，两人将重演上赛季欧洲大师赛决赛，当时范争一决赛中10-9险胜，夺得个人职业生涯首个排名赛冠军。</span>&nbsp;</p>\n<p><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">对于此次小组赛决赛中，自己的手下败将赵心童，奥沙利文依旧是对他充满了各种赞美之词，“赵（心童）是一位令人惊叹的球员，才华横溢的天才。我确信他将会有一个令人惊叹的未来。很希望，他能做到，因为我对他很有好感。从技术上讲，他一切都有了。”奥沙利文赛后在接受媒体采访时如是说到。</span>&nbsp;</p>\n<p><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">众所周知，奥沙利文私下与赵心童关系很好，甚至一度以师父的身份指导他日常训练。对于赵心童的高度肯定，奥沙利文已经不是一两次提及了，但每次嘴上说着恭维的话，比赛中却是往死里打，用球迷的话讲，这就是捧杀，彩虹屁！千万不要当真，不然真就完了。</span> <br>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1667544698858,
+      "star": 0,
+      "view": 0,
+      "id": 48,
+      "publishTime": 1667544853392
+    },
+    {
+      "title": "私募十大重仓股出炉：贵州茅台、海康威视、紫金矿业位居前三",
+      "category": "生活理财",
+      "content": "<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">上市公司三季报披露收官，各大明星百亿私募的持仓情况公之于众。Wind数据显示，截至9月底，共有1284只私募产品登上了1079家上市公司的前十大流通股东名单，但期末持股市值为2022亿元，较半年报缩水282亿元。其中，百亿私募的持股市值占比过半，共有37家百亿私募进入285家上市公司前十大流通股名单，合计持股市值1092.97亿元，其中新进66家，增持40家，减持75家。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">值得注意的是，多家知名百亿私募的重仓股调整不大，而邓晓峰大手笔买入比亚迪将其一跃送至私募持仓前十大之一，冯柳则密集减持了多家医药公司。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\"><strong>私募十大重仓股亮相</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">就私募的总体情况而言，通联数据显示，阳光私募的前十大重仓股分别是贵州茅台、海康威视、紫金矿业、中国动力、雅戈尔、东方盛虹、香农芯创、比亚迪、智飞生物、华秦科技，涉及白酒、计算机、有色、纺织、军工等各个行业。这与公募基金有显著的差别，公募的前十大重仓股分别为贵州茅台、宁德时代、泸州老窖、五粮液、隆基绿能、山西汾酒、迈瑞医疗、亿纬锂能、保利发展、紫光国微，集中在白酒和新能源板块。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">星图金融研究院研究员黄大智对《华夏时报》记者表示，因为面向的投资者不同，整体而言，公募的投资风格更偏稳健，重仓股多是已经被市场验证过白马股或价值股；私募相对激进，会选择在左侧布局的思路，持仓更偏好底部反转或成长股，以谋求更高的收益。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">东方盛虹、顺鑫农业、永辉超市、梦百合、荣盛发展、金石资源、奥特维、恒华科技、华域汽车、京基智农则是三季度被私募加仓最多的前十只个股，所处行业也较为分散。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">被私募减仓最多的前十只个股则是恒立液压、海康威视、紫金矿业、同仁堂、妙可蓝多、智飞生物、中国巨石、舍得酒业、益丰药房、华东医药，消费和医药占比最多。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\"><strong>明星经理减仓医药股</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">冯柳管理的高毅邻山1号远望仍然是持股市值最大的私募基金，期末持股市值为215.26亿元，三季末进入16家公司的前十大流通股东之列。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">该基金最大的权重股仍然是海康威视（002415.SZ），冯柳在三季度增持3400万股，持股数量攀升至4.32亿股，这也达到了其自2020年三季度进入前十大流通股东后的峰值，占海康威视总股本的比例达到4.58%，位列第四。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">冯柳还在三季度新进白酒股顺鑫农业（000860.SZ）和军工股国睿科技（600562.SH）的前十大流通股东名单，分别持有3150万股和1000万股，期末市值约6.27亿元和1.34亿元。但在新进国睿科技的同时，邻山1号远望基金还在三季度退出了军工股航发动力的前十大流通股东。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">此外，冯柳重点减持了医药股，退出人福医药、华润三九前十大流通股东，减仓同仁堂、羚锐制药、大参林、益丰药房、南微医学。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">高毅资产的另一位“顶流”邓晓峰在三季度也退出了军工股中国海防和光威复材的前十大流通股东。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">公告显示，中国海防前三季度营业收入25.58亿元，同比减少14.08%；净利润2.32亿元，同比减少48.43%。光威复材同期营收为19.4亿元，同比下降1.14%；净利润7.5亿元，同比增长21.36%。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">获得邓晓峰青眼相看的是比亚迪，他在三季度斥资19亿元买入754万股，跻身公司第九大流通股东。同时，他管理的三只基金合计加仓2600万股，总持股数量升至9.18亿股，对应持仓市值约72亿元。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\"><strong>投资大佬接连发声</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">私募排排网数据显示，三季末共有37家百亿私募旗下产品进入到285家上市公司前十大流通股名单，合计持股市值1092.97亿元，其中增持上市公司40家，新进上市公司66家，减持上市公司75家，另有104家持股不变。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">百亿私募重阳投资在三季度持仓变化不大，现身10家上市公司前十大流通股东榜单，比年中时增加一家，是掌门人裘国根管理的重阳价值1号新进小盘医药股福元医药。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">林鹏的和谐汇一则退出了医药股百济神州的前十大流通股东，加仓华域汽车，对石基信息持股不变。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">10月28日，林鹏发布道歉信，表示产品的净值表现让持有人包括自己都感到非常失望，将优化风险控制措施。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">景林资产的核心股不变，仍然是大族激光、大华股份、深圳机场、歌力思，同时三季度新进入环保股福鞍股份的前十大流通股东。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">盘京投资则新进化工股泰和科技、川恒股份，以及有色板块鼎胜新材、电子股德邦科技。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">淡水泉唯一的新进股是信创板块的生益科技。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">高瓴资本旗下的瓴仁私募基金在三季末继续持有上海机电和丽珠集团，同时新进入八方股份。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">慎知资产在三季度新进成为医药股华大智造和普利制药前十大流通股东，同时退出移远通信、千味央厨、新益昌的前十大。但10月31日晚，慎知资产掌门人余海丰公开检讨：“去年7月，还有今年10月的大跌，我终究是逃不掉。我的道行太浅了……我的站位太低了……”</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">他在9月底时曾乐观表示，下跌并不可怕，与其关心持仓股票的下跌，不如关心企业的竞争力。“我希望，我持有的企业的竞争力至少没有被削弱。这样，穿过寒冬，又是汉子一条！有了这样的思路，你就不用担心寒冬有多长，因为寒冬越长，随着竞争对手的不断退出，最后的爆发力会越强，而寒冬终将过去。”</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">编辑：严晖 主编：夏申茶</span>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1667544731636,
+      "star": 0,
+      "view": 0,
+      "id": 49,
+      "publishTime": 1667544853961
+    },
+    {
+      "title": "中欧基金是否该降费？旗下产品三季度亏掉473亿",
+      "category": "生活理财",
+      "content": "<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">随着公募基金三季报披露完成，各基金的第三季度盈亏情况也随之出炉。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">数据显示，中欧基金旗下非货基产品第三季度合计浮亏473.63亿元、2022年上半年合计浮亏420.7亿元。录得大额亏损的同时，中欧基金作为基金管理人2022年上半年累计从上述产品收取管理费约23.88亿元。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">其中，中欧医疗健康2022年第三季度浮亏147.9亿元，成为全市场非货基中的“亏损王”。自2016年成立以来截至2022年三季度末，中欧医疗健康累计产生浮亏约212.9亿元。而截至2022年6月末，中欧基金作为基金管理人累计从该基金收取管理费超过15亿元。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\"><strong> 三季度合亏473亿，上半年收取管理费23亿 </strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">数据显示，中欧基金旗下非货币型基金产品2022年第三季度合计亏损约473.63亿元，共有10只产品亏损超过10亿元，包括中欧医疗健康、中欧医疗创新、中欧阿尔法、中欧时代先锋等产品。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">2022年上半年，上述产品合计产生浮亏420.7亿元。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">不过，尽管基金大幅亏损，基金管理人仍然可以凭借管理费收入实现旱涝保收。统计显示，2022年上半年，中欧基金作为基金管理人累计从上述基金收取管理费约23.88亿元。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\"><strong> 中欧医疗健康三季度浮亏147亿，成“亏损王” </strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">中欧医疗健康是中欧基金旗下的三季度“亏损王”。中欧医疗健康成立于2016年9月，募集期间净认购金额约2.09亿元。截至2022年三季度末，该基金资产净值达到613.3亿元。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">2022年第三季度，中欧医疗健康A净值回撤19.95%，跑输业绩比较基准8.5个百分点。截至2022年第三季度末的过去一年，该基金净值回撤39.4%，跑输业绩比较基准18.34个百分点。</span></p>\n<p><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">庞大的基金规模加上深度回撤，使得中欧医疗健康成为了全市场第三季度非货基（不包括指数基金，下同）中的“亏损王”。数据显示，中欧医疗健康三季度亏损达到147.9亿元，是所有非货基中唯一亏损超过100亿元的产品。</span>&nbsp;&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">截至2022年10月28日，中欧医疗健康A净值回撤27.32%，同类排名1870/2668。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\"><strong> 累亏212亿，收取管理费15亿 </strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">中欧医疗健康目前已成立超过6年。截至2022年10月28日，中欧医疗健康A成立以来累计取得收益146.43%，年化收益率达到15.98%。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">从收益率数据来看，中欧医疗健康长期业绩表现并不差，甚至居于同业前列。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">但是，由于基金规模大幅跃升主要发生在2020年以后，而2021年以来市场整体和基金均出现深幅调整，从而导致中欧医疗健康成立以来累计产生大额亏损。</span>&nbsp;</p>\n<p><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">数据显示，2020年末为中欧医疗健康累计盈利的高峰期，金额达到89.59亿元。2021年，中欧医疗健康累计盈利大幅缩水至17.35亿元。到了2022年三季度末，该基金已累计产生浮亏212.9亿元。</span>&nbsp;</p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">不过，截至2022年二季度末，中欧基金作为管理人，累计从中欧医疗健康收取管理费约15.4亿元。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">国办此前印发《关于进一步优化营商环境降低市场主体制度性交易成本的意见》，鼓励证券、基金、担保等机构进一步降低服务收费。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">中欧基金作为市场头部机构，是否应该主动降低相关费用，让利投资人？</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">免责声明：本文仅供信息分享，不构成对任何人的任何投资建议。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">版权声明：本作品版权归面包财经所有，未经授权不得转载、摘编或利用其它方式使用本作品。</span>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1667544782948,
+      "star": 0,
+      "view": 0,
+      "id": 50,
+      "publishTime": 1667544855638
+    },
+    {
+      "title": "“金九银十”房企表现不及预期！拿地额降幅连续五个月收窄",
+      "category": "生活理财",
+      "content": "<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">10月，时值传统“金九银十”销售旺季，房地产市场表现如何？</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">从百强房企全口径销售额来看，10月单月销售额环比有所增长，特别是TOP50房企表现优于行业整体，其中逾6成房企销售额环比增长。累计来看，1-10月百强房企销售额同比降幅也有所收窄。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">从房企拿地情况来看，1-10月，百强房企拿地规模同比下降50.2%，降幅连续5个月维持收窄态势。不过，50家代表企业10月单月拿地总额同比、环比降幅扩大。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">业内人士认为，10月房企整体销售仍延续了相对低迷的表现，百强房企拿地规模虽然降幅收窄，但收窄幅度较小，恢复力度较弱。预计房地产市场大概率弱修复，成交整体回升幅度或将有限。若宏观经济稳定恢复、相关政策积极落地且多地疫情得到有效控制，购房者置业情绪有望逐步修复，四季度新房市场或逐渐企稳。 </span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\"><strong>单月销售业绩环比增长</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">前10月，百强房企销售业绩同比降幅较上月收窄。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">中指研究院的数据显示，1-10月，百强房企销售额同比下降43.4%，降幅较上月收窄1.7个百分点。 </span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">从10月单月来看，中指研究院的数据显示，百强房企单月销售额（全口径）同比下降26.5%，环比增长1.6%。而克而瑞研究中心的数据显示，百强房企单月实现销售操盘金额5560.7亿元，环比降低2.6%，降幅高于往年平均；同比降幅较9月扩大3个百分点至28.4%。 </span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">从具体企业表现来看，TOP50房企表现优于行业整体。克而瑞研究中心的数据显示，有32家企业单月业绩环比增长，占比超6成；仅18家企业单月业绩环比降低，且环比降幅多在30%以内。同时，10月中海、建发、华发的表现相对突出，单月业绩环比增幅均高于30%。 </span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">克而瑞研究中心指出，10月，时值传统“金九银十”销售旺季，虽然规模房企积极把握“国庆”假期、提前铺排供货、加码折扣及活动营销的力度，但10月企业整体销售仍延续了相对低迷的表现。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">分区域来看，长三角地区市场明显降温，即便是上海、杭州这类热点城市，成交也在下降。大湾区市场集体遇冷，受疫情防控影响，广州、深圳、佛山等供应环比腰斩，成交全面转跌。环渤海地区市场明显分化，北京、青岛、济南等成交转降，天津、大连等成交筑底回升。中西部地区市场回稳，成都、长沙、重庆等成交皆企稳回升。 </span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">从传统“金九银十”月份的表现来看，中指研究院的数据显示，9月重点100城市商品住宅成交面积环比增长6.1%，同比下降19.1%，“金九”表现不及预期。进入10月，受多地疫情反复等因素影响，市场情绪未见明显改善，各地政策有待显效，据初步统计，重点100城成交面积环比下降约10%，同比降幅仍在两成左右。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">从公布销售目标的15家房地产企业来看，中指研究院指出，1-10月，目标完成率均值为58.8%，低于去年同期的78.5%，完成全年目标压力较大。 </span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\"><strong>拿地额同比降幅连续五个月收窄</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">从拿地情况来看，中指研究院的数据显示，1-10月，百强房企拿地总额11229亿元，拿地规模同比下降50.2%，降幅比上月收窄1.0个百分点，连续五月维持收窄态势。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">从新增货值来看，华润置地、保利发展和招商蛇口占据榜单前三位。1-10月，华润置地以累计新增货值2003亿元占据榜单第一；保利发展和招商蛇口紧随其后，累计新增货值规模分别为1923亿元和1588亿元。TOP10企业1-10月新增货值总额12616亿元，占TOP100企业的36.1%，新增货值门槛为800亿元。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">值得注意的是，50家代表企业单月拿地总额同比、环比降幅扩大。中指研究院的数据显示，10月，50家代表房企拿地总额同比下降42.6%，降幅较上月扩大；环比大幅下降75.9%。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">据中指研究院监测，截至10月27日，22城中已有19城发布三批次土地公告，今年三批次推地时间较去年均提前，但在市场下行、企业拿地意愿较低情况下，土地推出规模普遍缩量，22城全年供地计划完成率不足五成。成交表现整体趋冷，除了一些热点城市保持热度外，底价成交成为土拍市场主旋律；三批次民企拿地意愿进一步降低，同时央国企拿地力度也出现减弱态势。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">中指研究院企业事业部研究负责人刘水认为，百强房企拿地恢复力度较弱。从各城市群拿地金额来看，长三角地区领跑全国。从重点城市拿地金额TOP10房企来看，央国企仍是主力。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">近期，部分城市陆续推出第四批次集中供地，无锡推出第五批次集中供地，集中供地模式呈少量多次供应，各批次之间或溢价或触顶地块占比持续走低，底价成交地块占比逐渐增高。 </span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">10月，财政部126号文出台，要求地方严禁通过举债储备土地，不得通过国企购地等方式虚增土地出让收入。中指研究院预计，未来地方城投拿地或受到更多约束。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">展望未来，克而瑞研究中心认为，地方需求端政策力度有望加码，保交楼纾困政策将持续推进，但全国性强力政策较难出台。房地产市场大概率弱修复，成交整体回升幅度或将有限。 </span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);font-size: 16px;font-family: Microsoft Yahei\", Avenir, \"Segoe UI\", \"Hiragino Sans GB\", STHeiti, \"Microsoft Sans Serif\", \"WenQuanYi Micro Hei\", sans-serif;\">中指研究院则认为，短期来看，市场恢复节奏仍取决于宏观基本面修复程度、疫情防控效果和政策端优化力度等方面，若宏观经济稳定恢复、相关政策积极落地且多地疫情得到有效控制，购房者置业情绪有望逐步修复，四季度新房市场或逐渐企稳；若短期多地疫情反复态势延续，严格的疫情防控举措下，预计房地产市场企稳的时间还将继续延后。</span> <br>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1667544810707,
+      "star": 0,
+      "view": 0,
+      "id": 51,
+      "publishTime": 1667544857198
+    }
+  ]
+}
